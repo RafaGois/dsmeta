@@ -37,7 +37,9 @@ public class SMSService {
 		String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 		
 		String msg = String.format("O vendedor %s foi destaque em %s com um total de R$ %.2f", sale.getSellerName(), date, sale.getAmount());
-
+		
+		//String msg = "Parabéns senhor Edielsoooooon, você acaba de supsotamente ganhar um gol bolinha 0km";
+		
 		Twilio.init(twilioSid, twilioKey);
 
 		PhoneNumber to = new PhoneNumber(twilioPhoneTo);
